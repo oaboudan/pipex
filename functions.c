@@ -6,13 +6,13 @@
 /*   By: oaboudan <oaboudan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 17:21:51 by oaboudan          #+#    #+#             */
-/*   Updated: 2023/02/25 19:30:23 by oaboudan         ###   ########.fr       */
+/*   Updated: 2023/02/26 19:23:23 by oaboudan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pipex.h"
 
-void	absd(char *cmd, char **env, int fdin)
+void	pipex(char *cmd, char **env, int fdin)
 {
 	pid_t	pid;
 	int		pipefd[2];

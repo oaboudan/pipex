@@ -6,7 +6,7 @@
 /*   By: oaboudan <oaboudan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 21:21:23 by oaboudan          #+#    #+#             */
-/*   Updated: 2023/02/25 21:51:11 by oaboudan         ###   ########.fr       */
+/*   Updated: 2023/02/26 19:23:54 by oaboudan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	main(int ac, char **av, char **env)
 	if (ac == 5)
 	{
 		dup2(fd[0], STDIN);
-		absd(av[2], env, fd[0]);
+		pipex(av[2], env, fd[0]);
 		dup2(fd[1], STDOUT);
 		child2 = fork();
 		checkfork(child2);
