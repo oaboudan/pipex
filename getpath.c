@@ -6,7 +6,7 @@
 /*   By: oaboudan <oaboudan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 17:27:08 by oaboudan          #+#    #+#             */
-/*   Updated: 2023/02/25 17:56:32 by oaboudan         ###   ########.fr       */
+/*   Updated: 2023/03/02 21:29:42 by oaboudan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,6 @@ void	exitfuntion(char *path)
 	if (path == NULL)
 	{
 		perror("no path");
-		exit(-1);
+		exit(1);
 	}
 }

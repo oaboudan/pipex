@@ -6,7 +6,7 @@
 /*   By: oaboudan <oaboudan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 17:21:51 by oaboudan          #+#    #+#             */
-/*   Updated: 2023/02/26 19:23:23 by oaboudan         ###   ########.fr       */
+/*   Updated: 2023/02/27 20:51:50 by oaboudan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	checkfork(int i)
 	if (i == -1)
 	{
 		perror("process creating faill");
-		return ;
+		exit(1);
 	}
 }
 

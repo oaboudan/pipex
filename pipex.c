@@ -6,7 +6,7 @@
 /*   By: oaboudan <oaboudan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 21:21:23 by oaboudan          #+#    #+#             */
-/*   Updated: 2023/02/26 19:23:54 by oaboudan         ###   ########.fr       */
+/*   Updated: 2023/03/02 21:30:16 by oaboudan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ int	main(int ac, char **av, char **env)
 	int	fd[2];
 	int	child2;
 
-	fd[0] = open(av[1], O_RDWR);
-	fd[1] = open(av[4], O_CREAT | O_RDWR | O_TRUNC, 0777);
-	if (fd[0] == -1 || fd[1] == -1)
-		return (write(STDERR, "something is wrong.\n", 20), (-1));
 	if (ac == 5)
 	{
+		fd[0] = open(av[1], O_RDWR);
+		fd[1] = open(av[4], O_CREAT | O_RDWR | O_TRUNC, 0777);
+		if (fd[0] == -1 || fd[1] == -1)
+			return (write(STDERR, "something is wrong in fd.\n", 20), (-1));
 		dup2(fd[0], STDIN);
 		pipex(av[2], env, fd[0]);
 		dup2(fd[1], STDOUT);
